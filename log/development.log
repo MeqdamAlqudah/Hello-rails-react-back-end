@@ -1,0 +1,190 @@
+  [1m[35m (17.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8230225382653140405)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (36.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGreetings (20220624192957)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1825.4ms)[0m  [1m[35mCREATE TABLE "greetings" ("id" bigserial primary key, "greetingmessage" character varying, "string" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (23.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220624192957"]]
+  [1m[36mTRANSACTION (35.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (57.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(8230225382653140405)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-06-24 22:59:19 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oem/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oem/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 23.8ms | Allocations: 646)
+Completed 200 OK in 87ms (Views: 33.9ms | ActiveRecord: 0.0ms | Allocations: 4880)
+
+
+Started GET "/routes" for ::1 at 2022-06-24 22:59:28 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+Started GET "/routes" for ::1 at 2022-06-24 23:01:58 +0300
+  
+ActionController::RoutingError (uninitialized constant PagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/favicon.ico" for ::1 at 2022-06-24 23:01:59 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/routes" for ::1 at 2022-06-24 23:03:06 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+Started GET "/favicon.ico" for ::1 at 2022-06-24 23:03:07 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/routes" for ::1 at 2022-06-24 23:18:35 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+Started GET "/routes" for ::1 at 2022-06-24 23:22:44 +0300
+  
+SyntaxError (/home/oem/Microverse/Hello-rails-react-back-end/config/routes.rb:6: syntax error, unexpected [, expecting `do' or '{' or '('
+  resources :greetings ,only [:index,:create,new]
+                             ^
+):
+  
+config/routes.rb:6: syntax error, unexpected [, expecting `do' or '{' or '('
+config/routes.rb:6: syntax error, unexpected [, expecting `do' or '{' or '('
+Started GET "/routes" for ::1 at 2022-06-24 23:23:11 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+Started OPTIONS "/greetings" for ::1 at 2022-06-25 00:12:19 +0300
+Started OPTIONS "/greetings" for ::1 at 2022-06-25 00:12:27 +0300
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/greetings"):
+  
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/greetings"):
+  
+Started OPTIONS "/greetings" for ::1 at 2022-06-25 00:16:54 +0300
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/greetings"):
+  
+Started OPTIONS "/greetings" for ::1 at 2022-06-25 00:18:26 +0300
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/greetings"):
+  
+Started OPTIONS "/greetings" for ::1 at 2022-06-25 00:23:42 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (82.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/greetings" for ::1 at 2022-06-25 00:23:47 +0300
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started POST "/greetings" for ::1 at 2022-06-25 00:27:40 +0300
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started POST "/greetings" for ::1 at 2022-06-25 00:29:04 +0300
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for ::1 at 2022-06-25 00:29:54 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oem/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oem/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 88.7ms | Allocations: 326)
+Completed 200 OK in 499ms (Views: 90.8ms | ActiveRecord: 0.0ms | Allocations: 2246)
+
+
+Started GET "/routes" for ::1 at 2022-06-25 00:30:42 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+Started GET "/routes" for ::1 at 2022-06-25 00:31:39 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+Started POST "/greetings" for ::1 at 2022-06-25 00:31:56 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/greetings"):
+  
+Started OPTIONS "/v1/greetings" for ::1 at 2022-06-25 00:35:25 +0300
+Started POST "/v1/greetings" for ::1 at 2022-06-25 00:35:25 +0300
+Processing by V1::GreetingsController#create as HTML
+  Parameters: {"greetingmessage"=>"Hello World", "greeting"=>{"greetingmessage"=>"Hello World"}}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/greetings_controller.rb:12:in `create'
+  [1m[36mGreeting Create (1867.9ms)[0m  [1m[32mINSERT INTO "greetings" ("greetingmessage", "string", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["greetingmessage", nil], ["string", nil], ["created_at", "2022-06-24 21:35:30.996648"], ["updated_at", "2022-06-24 21:35:30.996648"]]
+  ↳ app/controllers/v1/greetings_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (85.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/greetings_controller.rb:12:in `create'
+Completed 200 OK in 3904ms (Views: 0.7ms | ActiveRecord: 4282.0ms | Allocations: 5943)
+
+
+Started POST "/v1/greetings" for ::1 at 2022-06-25 00:35:56 +0300
+Started POST "/v1/greetings" for ::1 at 2022-06-25 00:35:56 +0300
+Processing by V1::GreetingsController#create as HTML
+  Parameters: {"greetingmessage"=>"Amazing World", "greeting"=>{"greetingmessage"=>"Amazing World"}}
+Processing by V1::GreetingsController#create as HTML
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/greetings_controller.rb:12:in `create'
+  Parameters: {"greetingmessage"=>"Amazing World", "greeting"=>{"greetingmessage"=>"Amazing World"}}
+  [1m[36mGreeting Create (124.1ms)[0m  [1m[32mINSERT INTO "greetings" ("greetingmessage", "string", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["greetingmessage", nil], ["string", nil], ["created_at", "2022-06-24 21:35:56.847314"], ["updated_at", "2022-06-24 21:35:56.847314"]]
+  ↳ app/controllers/v1/greetings_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (180.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/greetings_controller.rb:12:in `create'
+Completed 200 OK in 311ms (Views: 0.4ms | ActiveRecord: 305.9ms | Allocations: 3485)
+
+
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/greetings_controller.rb:12:in `create'
+  [1m[36mGreeting Create (49.3ms)[0m  [1m[32mINSERT INTO "greetings" ("greetingmessage", "string", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["greetingmessage", nil], ["string", nil], ["created_at", "2022-06-24 21:35:58.039486"], ["updated_at", "2022-06-24 21:35:58.039486"]]
+  ↳ app/controllers/v1/greetings_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (20.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/greetings_controller.rb:12:in `create'
+Completed 200 OK in 1328ms (Views: 0.3ms | ActiveRecord: 186.5ms | Allocations: 6329)
+
+
+Started POST "/v1/greetings" for ::1 at 2022-06-25 00:36:08 +0300
+Processing by V1::GreetingsController#create as HTML
+  Parameters: {"greetingmessage"=>"Hello Rails", "greeting"=>{"greetingmessage"=>"Hello Rails"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/greetings_controller.rb:12:in `create'
+  [1m[36mGreeting Create (67.2ms)[0m  [1m[32mINSERT INTO "greetings" ("greetingmessage", "string", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["greetingmessage", nil], ["string", nil], ["created_at", "2022-06-24 21:36:08.432972"], ["updated_at", "2022-06-24 21:36:08.432972"]]
+  ↳ app/controllers/v1/greetings_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (27.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/greetings_controller.rb:12:in `create'
+Completed 200 OK in 136ms (Views: 0.3ms | ActiveRecord: 94.6ms | Allocations: 1885)
+
+
+Started POST "/v1/greetings" for ::1 at 2022-06-25 00:36:21 +0300
+Processing by V1::GreetingsController#create as HTML
+  Parameters: {"greetingmessage"=>"Nice World with Nice people !!", "greeting"=>{"greetingmessage"=>"Nice World with Nice people !!"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/greetings_controller.rb:12:in `create'
+  [1m[36mGreeting Create (0.4ms)[0m  [1m[32mINSERT INTO "greetings" ("greetingmessage", "string", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["greetingmessage", nil], ["string", nil], ["created_at", "2022-06-24 21:36:21.748549"], ["updated_at", "2022-06-24 21:36:21.748549"]]
+  ↳ app/controllers/v1/greetings_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (26.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/greetings_controller.rb:12:in `create'
+Completed 200 OK in 32ms (Views: 0.5ms | ActiveRecord: 27.1ms | Allocations: 1870)
+
+
