@@ -1,0 +1,25 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  username: <%= Rails.application.credentials.database[:username] %>
+  password: <%= Rails.application.credentials.database[:password] %>
+  host: localhost
+  database: hello_rails_react_app_development
+
+test:
+  <<: *default
+  username: <%= Rails.application.credentials.database[:username] %>
+  password: <%= Rails.application.credentials.database[:password] %>
+  host: localhost
+  database: hello_rails_react_app_test
+
+production:
+  <<: *default
+  database: hello_rails_react_app_production
+  username: hello_rails_react_app
+  password: <%= ENV["HELLO_RAILS_REACT_APP_DATABASE_PASSWORD"] %>
